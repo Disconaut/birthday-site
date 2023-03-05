@@ -1,0 +1,9 @@
+C:\Users\O.Melanchuk\source\repos\Sima\birthday-site\public\gallery\imagesPaths.json
+C:\Users\O.Melanchuk\source\repos\Sima\birthday-site\public\gallery\IMG_3524.JPG
+C:\Users\O.Melanchuk\source\repos\Sima\birthday-site\public\gallery\IMG_3616.JPG
+C:\Users\O.Melanchuk\source\repos\Sima\birthday-site\public\gallery\IMG_3624.JPG
+C:\Users\O.Melanchuk\source\repos\Sima\birthday-site\public\gallery\IMG_3633.JPG
+C:\Users\O.Melanchuk\source\repos\Sima\birthday-site\public\gallery\IMG_3636.JPG
+C:\Users\O.Melanchuk\source\repos\Sima\birthday-site\public\gallery\IMG_3637.JPG
+C:\Users\O.Melanchuk\source\repos\Sima\birthday-site\public\gallery\IMG_3644.JPG
+C:\Users\O.Melanchuk\source\repos\Sima\birthday-site\public\gallery\textfile.txt
