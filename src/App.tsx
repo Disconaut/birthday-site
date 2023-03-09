@@ -6,7 +6,7 @@ import { ParallaxProvider } from 'react-scroll-parallax';
 import { useMediaQuery } from '@mui/material';
 import PleaseRotate from './components/PleaseRotate';
 
-const isOnlyForLandscape = process.env.REACT_APP_ONLY_LANDSCAPE;
+const isOnlyForLandscape: boolean = process.env.REACT_APP_ONLY_LANDSCAPE === 'true';
 
 const appHeight = () => {
   const doc = document.documentElement;
