@@ -12,7 +12,7 @@ type TProps = {
 }
 
 const imagesCountLandscape = 60;
-const imagesCountPortrait = 95;
+const imagesCountPortrait = 100;
 
 const randomizeImages = (images: string[], count: number) => {
     const repeatCount = Math.ceil(count / images.length);
