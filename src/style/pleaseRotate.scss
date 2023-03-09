@@ -1,0 +1,15 @@
+.bd-please-rotate {
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .icon {
+        font-size: 96px;
+    }
+    .text {
+        font-size: 20px;
+    }
+}

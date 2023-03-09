@@ -1,29 +1,38 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem from '@mui/material/ImageListItem';
-import images from '../resources/imagesPaths.json';
+import imagePaths from '../resources/imagesPaths.json';
 import { ParallaxBanner, ParallaxBannerLayer } from 'react-scroll-parallax';
 import { Box, Container, Stack, Typography } from '@mui/material';
 
 import '../style/main.scss';
 
+type TProps = {
+    isPortrait?: boolean;
+}
+
+const imagesCountLandscape = 60;
+const imagesCountPortrait = 95;
+
 const randomizeImages = (images: string[], count: number) => {
-    const repeatedImages = Array(count).fill(images).flat();
-    return repeatedImages.sort(() => Math.random() - 0.5);
+    const repeatCount = Math.ceil(count / images.length);
+    const repeatedImages = Array(repeatCount).fill(images).flat();
+    const randomizedImages = repeatedImages.sort(() => Math.random() - 0.5);
+    return randomizedImages.slice(0, count);
 };
 
-const Main: React.FC = () => {
+const Main: React.FC<TProps> = ({ isPortrait }) => {
+    const images = useRef<string[]>(randomizeImages(imagePaths, isPortrait ? imagesCountPortrait : imagesCountLandscape));
+
     return (
         <ParallaxBanner className='bd-main'>
             <ParallaxBannerLayer speed={30}>
-                <ImageList variant='masonry' cols={10}>
-                    {randomizeImages(images, 110).map((image) => (
+                <ImageList variant='masonry' cols={5}>
+                    {images.current.map((image) => (
                         <ImageListItem key={image}>
                             <img
-                                src={`${image}`}
-                                srcSet={`${image}`}
                                 alt='Симпампулик'
-                                loading="lazy"
+                                src={image}
                             />
                         </ImageListItem>
                     ))}
