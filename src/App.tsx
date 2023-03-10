@@ -5,6 +5,7 @@ import Main from './components/Main';
 import { ParallaxProvider } from 'react-scroll-parallax';
 import { useMediaQuery } from '@mui/material';
 import PleaseRotate from './components/PleaseRotate';
+import Video from './components/Video';
 
 const isOnlyForLandscape: boolean = process.env.REACT_APP_ONLY_LANDSCAPE === 'true';
 
@@ -30,6 +31,7 @@ const App: React.FC = () =>{
       <ParallaxProvider>
         <Header />
         <Main isPortrait={isPortrait && !isOnlyForLandscape} />
+        <Video />
       </ParallaxProvider>
     </>
   );

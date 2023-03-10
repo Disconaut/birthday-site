@@ -2,6 +2,9 @@
 
 .bd-main {
     height: rem(1500px);
+    @media (max-width: rem(600px)) {
+        height: rem(2800px);
+    }
     .greeting {
         height: 100%;
         display: flex;
